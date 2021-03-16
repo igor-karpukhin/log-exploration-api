@@ -24,10 +24,10 @@ func NewLogsController(log *zap.Logger, logsProvider logs.LogsProvider, router *
 
 	r.GET("/", controller.GetAllLogs)
 	//please enter time in the following format YYYY-MM-DDTHH:MM:SS[TIMEZONE - +00:00]
-	r.GET("timefilter/:startTime/:finishTime", controller.FilterLogsByTime)
-	r.GET("indexfilter/:index", controller.FilterLogsByIndex)
-	r.GET("podnamefilter/:podname", controller.FilterLogsByPodName)
-	r.GET(":podname/:namespace/:starttime/:finishtime", controller.FilterLogsMultipleParameters)
+	//r.GET("timefilter/:startTime/:finishTime", controller.FilterLogsByTime)
+	//r.GET("indexfilter/:index", controller.FilterLogsByIndex)
+	//r.GET("podnamefilter/:podname", controller.FilterLogsByPodName)
+	//r.GET(":podname/:namespace/:starttime/:finishtime", controller.FilterLogsMultipleParameters)
 
 	return controller
 }
